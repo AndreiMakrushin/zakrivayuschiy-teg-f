@@ -187,6 +187,9 @@ body:has(dialog[open]) {
 .card__like-block:hover .button::before {
   transform: scaleX(1);
 }
+.button:hover::before {
+  transform: scaleX(1);
+}
 .card__icon-button:focus-visible {
   outline: var(--border);
 }
