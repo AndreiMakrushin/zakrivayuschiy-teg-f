@@ -210,7 +210,6 @@ body:has(dialog[open]) {
 
 .save-button {
   outline: none;
-  border: none;
   font-family: var(--font-accent);
   font-size: 14px;
   display: flex;
@@ -223,31 +222,31 @@ body:has(dialog[open]) {
   gap: 8px;
 }
 
-.blur {
+.filter__blur {
   filter: blur(10px);
 }
 
-.brightness {
+.filter__brightness {
   filter: brightness(2);
 }
 
-.contrast {
+.filter__contrast {
   filter: contrast(200%);
 }
 
-.grayscale {
+.filter__grayscale {
   filter: grayscale(100%);
 }
 
-.hue-rotate {
+.filter__hue-rotate {
   filter: hue-rotate(90deg);
 }
 
-.invert {
+.filter__invert {
   filter: invert(100%);
 }
 
-.sepia {
+.filter__sepia {
   filter: sepia(100%);
 }
 
