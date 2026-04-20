@@ -192,7 +192,7 @@ body:has(dialog[open]) {
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: var(--button-box-shadow);
 }
 
 .save-icon,
@@ -231,7 +231,7 @@ body:has(dialog[open]) {
 }
 
 .filter__contrast {
-  filter: contrast(200%);
+  filter: contrast(200%) brightness(100%);
 }
 
 .filter__grayscale {
@@ -281,7 +281,7 @@ body:has(dialog[open]) {
 }
 
 .dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: var(--backdrop-color);
 }
 
 @supports not (text-stroke: 0.5px var(--card-tag-text-stroke)) {

@@ -5,8 +5,8 @@
     "Inter-Variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   --font-accent: "Press-Start-2P", sans-serif;
-  --main-font-weight: 400;
-  --title-font-weight: 700;
+  --main-font-weight: 410;
+  --title-font-weight: 715;
   --bg-gradient:
     repeating-linear-gradient(
       90deg,
@@ -35,6 +35,8 @@
   --main-padding-top: 100px;
   --main-padding-bottom: 50px;
   --card-tag-text-stroke: white;
+  --backdrop-color: rgba(0, 0, 0, 0.75);
+  --button-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
 
   /* heart */
   --contour-color: #000000;
