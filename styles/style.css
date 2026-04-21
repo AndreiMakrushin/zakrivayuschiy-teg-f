@@ -102,13 +102,15 @@ body:has(dialog[open]) {
   right: 25px;
   opacity: 50%;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 0.5px var(--card-tag-text-stroke);
+  text-shadow: 0 0 2px var(--card-tag-text-stroke);
 }
 
 .card__image {
   display: block;
   width: 100%;
   aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__text {
@@ -146,6 +148,7 @@ body:has(dialog[open]) {
   align-items: center;
   justify-content: center;
   overflow: visible;
+  transition: outline 0.3s ease;
 }
 
 .like-icon {
@@ -169,6 +172,7 @@ body:has(dialog[open]) {
   border: var(--border);
   background-color: var(--bg-color);
   outline: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -184,9 +188,7 @@ body:has(dialog[open]) {
   transition: transform 0.5s ease-in-out;
   z-index: 1;
 }
-.card__like-block:hover .button::before {
-  transform: scaleX(1);
-}
+
 .button:hover::before {
   transform: scaleX(1);
 }
@@ -210,7 +212,9 @@ body:has(dialog[open]) {
 .dialog__button {
   padding: 15px 18px;
 }
-
+.dialog__button {
+  text-transform: uppercase;
+}
 .save-button {
   outline: none;
   font-family: var(--font-accent);
@@ -279,6 +283,7 @@ body:has(dialog[open]) {
 }
 
 .dialog__text {
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -287,9 +292,11 @@ body:has(dialog[open]) {
   background-color: var(--backdrop-color);
 }
 
-@supports not (text-stroke: 0.5px var(--card-tag-text-stroke)) {
+@supports (text-stroke: 0.5px var(--card-tag-text-stroke)) or
+  (-webkit-text-stroke: 0.5px var(--card-tag-text-stroke)) {
   .card__tag {
-    text-shadow: 0 0 2px var(--card-tag-text-stroke);
+    text-shadow: none;
+    -webkit-text-stroke: 0.5px var(--card-tag-text-stroke);
   }
 }
 
